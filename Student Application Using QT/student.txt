@@ -1,0 +1,54 @@
+				STUDENT RECORD MANAGEMENT SYSTEM USING QT
+
+**QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
+
+->Resolved by giving the proper connection of sqlite database,header files,and creating class and object.
+
+**MyObject* mu = new MyObject(); // dynamically allocate an object
+
+if (mu != nullptr) {
+    delete mu; // deallocate the object
+    mu = nullptr; // set the pointer to nullptr to avoid accessing deleted memory
+}
+->delete an object that was allocated dynamically using new. If mu was not allocated dynamically, attempting to delete it can result in undefined behavior.
+
+***query.bindValue(":standard", Standard);
+->bindValue() function is used to bind the value of Standard to the :standard placeholder in the query. This ensures that when the query is executed, the placeholder will be replaced with the actual value of Standard.
+
+
+**#include <QTableView>
+->QTableView is a widget provided by the Qt framework for displaying tabular data.
+
+
+
+*** qDebug() << query.lastQuery();
+    qDebug() << query.lastError();
+
+->qDebug() to print the last executed query and any associated error message.
+
+query.lastQuery() returns the text of the last executed query as a QString. It can be useful for debugging purposes to verify the actual query that was sent to the database.
+
+query.lastError() returns an object of type QSqlError that contains information about the last error that occurred on the database connection associated with the QSqlQuery object. It provides details such as the error message, error type, and the native error code.
+
+
+***int standardValue = Standard.toInt(&isStandardValid);
+
+->converts the Standard variable to an integer using the toInt() function and stores the result in the standardValue variable. It also checks the validity of the conversion by using the toInt() function's optional output parameter &isStandardValid.
+
+***nameRegex("^[A-Za-z]+$");
+->This regular expression can be used to match strings that consist only of alphabetical characters
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+UNIQUE:
+
+->Implemented the display function in all functionalities i.e.,It will show table result when we click on the OK button without checking in the table.
+->Implemented the hardcoded values to login.
+->Implemented the COUNT functionality to count total number students entered in the table regarding the particular standard.
